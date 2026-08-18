@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUp } from "lucide-react";
+import { getAssetPath } from "@/src/lib/configPaths";
 
 export function Footer() {
   return (
@@ -13,7 +14,7 @@ export function Footer() {
         <div className="md:col-span-5 space-y-4">
           <div className="flex items-center gap-3">
             <Image
-              src="/logotipo-black-removebg-preview.png"
+              src={getAssetPath("/logotipo-black-removebg-preview.png")}
               alt="Vima Studio Isotipo"
               width={100}
               height={100}

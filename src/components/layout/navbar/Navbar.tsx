@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { MobileMenu } from "./mobile-menu";
 import { ScrollNavbar } from "./scroll-navbar";
+import { getAssetPath } from "@/src/lib/configPaths";
 
 const NAV_LINKS = [
   { href: "#servicios", label: "Servicios" },
@@ -19,7 +20,7 @@ export function Navbar() {
           
           {/* Logo 1: Logotipo completo (Visible al inicio, se oculta en scroll) */}
           <Image
-            src="/img/logotipo-white-removebg-preview.png"
+            src={getAssetPath("/img/logotipo-white-removebg-preview.png")}
             alt="Vima Studio Logotipo"
             width={160}
             height={48}
@@ -29,7 +30,7 @@ export function Navbar() {
 
           {/* Logo 2: Isotipo (Oculto al inicio, aparece al hacer scroll) */}
           <Image
-            src="/img/isotipo-white-removebg-preview.png"
+            src={getAssetPath("/img/isotipo-white-removebg-preview.png")}
             alt="Vima Studio Isotipo"
             width={100}
             height={100}

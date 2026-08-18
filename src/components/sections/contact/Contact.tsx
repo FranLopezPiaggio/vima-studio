@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Send, CheckCircle2, User, Phone, Mail, MessageSquare, AtSign } from "lucide-react";
+import { getAssetPath } from "@/src/lib/configPaths";
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -35,7 +36,7 @@ export function Contact() {
             </h2>
 
             <Image
-              src="/img/isotipo-white-removebg-preview.png"
+              src={getAssetPath("/img/isotipo-white-removebg-preview.png")}
               alt="Vima Studio Isotipo"
               width={200}
               height={200}

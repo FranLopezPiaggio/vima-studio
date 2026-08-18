@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Tag } from "lucide-react";
+import { getAssetPath } from "@/src/lib/configPaths";
 
 interface Project {
   title: string;
@@ -62,7 +63,7 @@ export function Projects() {
       {/* 1. IMAGEN DE FONDO NEGRA CON BLUR */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/vima-studio-design-resources/logotipo-black.jpg" // Tu imagen de fondo desde public
+          src={getAssetPath("/vima-studio-design-resources/logotipo-black.jpg")} // Tu imagen de fondo desde public
           alt="Proyectos Background"
           fill
           priority
@@ -86,7 +87,7 @@ export function Projects() {
             </h2>
 
             <Image
-              src="/isotipo-black-removebg-preview (1).png"
+              src={getAssetPath("/isotipo-black-removebg-preview (1).png")}
               alt="Vima Studio Isotipo"
               width={200}
               height={200}

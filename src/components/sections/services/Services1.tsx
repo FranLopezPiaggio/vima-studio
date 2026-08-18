@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getAssetPath } from "@/src/lib/configPaths";
 
 export function Services() {
   return (
@@ -9,7 +10,7 @@ export function Services() {
       <div className="absolute inset-0 z-0 flex justify-end pointer-events-none">
         <div className="relative w-full h-full">
           <Image
-            src="/vima-studio-design-resources/bg-vima-colors.jpg" // Reemplaza por la ruta de tu imagen
+            src={getAssetPath("/vima-studio-design-resources/bg-vima-colors.jpg")} // Reemplaza por la ruta de tu imagen
             alt="Vima Studio Hero Background"
             fill
             priority

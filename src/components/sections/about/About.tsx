@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { getAssetPath } from "@/src/lib/configPaths";
 
 export function About() {
   return (
@@ -9,7 +10,7 @@ export function About() {
       {/* 1. IMAGEN DE FONDO DE TODA LA SECCIÓN */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/vima-studio-design-resources/2.png"
+          src={getAssetPath("/vima-studio-design-resources/2.png")}
           alt="Vima Studio Background"
           fill
           priority

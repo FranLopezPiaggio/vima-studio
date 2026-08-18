@@ -1,3 +1,4 @@
+import { getAssetPath } from "@/src/lib/configPaths";
 import Image from "next/image";
 // import { Linkedin, Twitter, Github } from "lucide-react";
 
@@ -63,7 +64,7 @@ export function Team() {
             </h2>
 
             <Image
-              src="/img/isotipo-white-removebg-preview.png"
+              src={getAssetPath("/img/isotipo-white-removebg-preview.png")}
               alt="Vima Studio Isotipo"
               width={200}
               height={200}

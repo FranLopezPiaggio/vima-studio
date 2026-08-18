@@ -1,4 +1,3 @@
-// src/components/navbar/scroll-navbar.tsx
 "use client";
 
 import { useEffect, useState } from "react";
