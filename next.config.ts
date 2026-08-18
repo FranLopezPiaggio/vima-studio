@@ -1,10 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  output: 'export',
+output: 'export',
+  // Si la URL termina en /vima-studio/, agrega el basePath:
+  basePath: process.env.NODE_ENV === 'production' ? '/vima-studio' : '',
   images: {
-    unoptimized: true, // Requerido porque GitHub Pages no soporta la optimización de imágenes en servidor de Next.js
+    unoptimized: true,
   },
 };
 
