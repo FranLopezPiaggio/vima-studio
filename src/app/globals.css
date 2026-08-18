@@ -1,26 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* 1. Mapeo de la paleta oficial de marca */
+  --color-brand-antracita: #2E2E2B;
+  --color-brand-cream: #F7F5F0;
+  --color-brand-coral: #FF444F;
+  --color-brand-sky: #ABBBF4;
+
+  /* 2. Mapeo para variables semánticas de shadcn/ui */
+  --color-background: var(--color-brand-cream);
+  --color-foreground: var(--color-brand-antracita);
+  
+  --color-primary: var(--color-brand-antracita);
+  --color-primary-foreground: var(--color-brand-cream);
+
+  --color-accent: var(--color-brand-coral);
+  --color-accent-foreground: var(--color-brand-cream);
+
+  --color-secondary: var(--color-brand-sky);
+  --color-secondary-foreground: var(--color-brand-antracita);
+
+  --color-border: #e2dfd7;
+
+  /* 3. Fuentes */
+  --font-sans: var(--font-inter), sans-serif;
+  --font-display: var(--font-geist-sans), sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
