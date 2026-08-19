@@ -1,6 +1,5 @@
 import { getAssetPath } from "@/src/lib/configPaths";
 import Image from "next/image";
-// import { Linkedin, Twitter, Github } from "lucide-react";
 
 interface TeamMember {
   name: string;
@@ -20,7 +19,7 @@ const TEAM_MEMBERS: TeamMember[] = [
     {
     name: "Victoria",
     role: "Founder & Graphic Designer",
-    image: "/img/team/member-3.jpg",
+    image: "/avatar-placeholder.jpg",
     pantoneCode: "14-4121 TCX",
     bio: "Creador de identidades dinámicas, ilustración vectorial y microinteracciones de marca.",
     accentColor: "bg-brand-sky text-brand-antracita",
@@ -29,7 +28,7 @@ const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Fatima",
     role: "Social & Paid Media",
-    image: "/img/team/member-2.jpg",
+    image: "/avatar-placeholder.jpg",
     pantoneCode: "19-3911 TCX",
     bio: "Creo estrategias organizas y con pauta para hacer crecer comunidades y marcas",
     accentColor: "bg-brand-antracita text-brand-cream",
@@ -39,7 +38,7 @@ const TEAM_MEMBERS: TeamMember[] = [
     name: "Franco",
     role: "Full-Stack Engineer",
     pantoneCode: "19-4052 TCX",
-    image: "/img/team/member-1.jpg",
+    image: "/avatar-placeholder.jpg",
     bio: "Desarrollador full stack con mas de 4 años de experiencia en proyectos reales, escalables y modernos.",
     accentColor: "bg-brand-coral text-white",
     socials: { linkedin: "#", twitter: "#" },
@@ -48,7 +47,7 @@ const TEAM_MEMBERS: TeamMember[] = [
 
 export function Team() {
   return (
-    <section id="equipo" className="w-full bg-brand-cream py-24 px-6">
+    <section id="Equipo" className="w-full bg-brand-cream py-24 px-6">
       <div className="max-w-7xl mx-auto space-y-16">
         
         {/* ENCABEZADO DE LA SECCIÓN */}

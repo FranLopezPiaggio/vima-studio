@@ -16,13 +16,10 @@ export function Footer() {
             <Image
               src={getAssetPath("/logotipo-black-removebg-preview.png")}
               alt="Vima Studio Isotipo"
-              width={100}
-              height={100}
-              className="w-auto object-contain brightness-200"
+              width={150}
+              height={150}
+              className="object-contain brightness-200"
             />
-            <span className="font-display font-bold text-xl tracking-tight text-white uppercase ml-[-30px]">
-              Studio
-            </span>
           </div>
           <p className="font-sans text-sm text-neutral-400 max-w-sm leading-relaxed">
             Estudio creativo independiente focalizado en desarrollo web de alto rendimiento, sistemas de diseño e identidades de marca digitales.

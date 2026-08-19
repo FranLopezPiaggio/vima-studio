@@ -6,6 +6,11 @@ export const basePath =
 
 // Helper para envolver cualquier ruta de public
 export const getAssetPath = (path: string) => {
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  if (!path) return '';
+  // Elimina puntos iniciales si existen (ej. ./img -> /img)
+  const cleanPath = path.replace(/^\.\//, '').startsWith('/')
+    ? path.replace(/^\.\//, '')
+    : `/${path}`;
+
   return `${basePath}${cleanPath}`;
 };

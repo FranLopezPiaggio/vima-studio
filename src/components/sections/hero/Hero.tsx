@@ -26,7 +26,7 @@ export function Hero() {
       </div>
 
       {/* 2. CONTENIDO PRINCIPAL (Ocupa aprox. el 40-50% en pantallas grandes) */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full flex flex-rows">
         <div className="max-w-xl lg:max-w-[45vw] space-y-6">
           
           {/* Eyebrow / Tag superior opcional */}
