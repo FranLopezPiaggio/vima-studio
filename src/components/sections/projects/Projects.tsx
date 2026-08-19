@@ -88,7 +88,7 @@ export function Projects() {
             </h2>
 
             <Image
-              src={getAssetPath("/isotipo-black-removebg-preview (1).png")}
+              src={getAssetPath("/isotipo-black-removebg-preview.png")}
               alt="Vima Studio Isotipo"
               width={200}
               height={200}
