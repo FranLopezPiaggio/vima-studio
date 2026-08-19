@@ -31,26 +31,30 @@ export function About() {
               Sobre Nosotros
             </span>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-antracita tracking-tight leading-tight">
-              Diseño con intención, desarrollo con precisión.
+              Diseño, branding y estrategia digital
             </h2>
           </div>
 
           <div className="space-y-4 font-sans text-base text-brand-antracita/90 leading-relaxed">
             <p>
-              Nacimos con una premisa clara: fusionar la potencia de la ingeniería de software moderna con el rigor del diseño gráfico y editorial. En un mercado saturado de soluciones genéricas, apostamos por la identidad y la relevancia.
+              Vima Studio es un estudio de diseño y agencia creativa enfocada en branding,
+              comunicación estratégica y gestión de contenidos digitales. 
             </p>
             <p>
-              Creemos en los sistemas visuales sólidos y en la arquitectura de código limpia. Cada proyecto que abordamos combina pensamiento estratégico, estética contemporánea y rendimiento técnico sin concesiones.
+              Nace de la unión
+              entre la precisión técnica y la soltura creativa, acompañando a marcas y
+              profesionales en la construcción de identidades visuales auténticas,
+              contemporáneas y con un posicionamiento claro en el mercado.
             </p>
           </div>
 
           {/* Bloque destacado con paleta de soporte (Soft Sky / Periwinkle) */}
           <div className="p-6 bg-brand-cream border-l-4 border-brand-cream space-y-2">
             <h4 className="font-display font-bold text-sm uppercase tracking-wider text-brand-coral">
-              Nuestra Filosofía
+              Nuestros Valores
             </h4>
-            <p className="font-sans text-xs text-brand-sky/120 leading-relaxed">
-              No construimos solo sitios web o marcas; diseñamos activos digitales perdurables que conectan de forma auténtica con las personas.
+            <p className="font-bold text-xs text-brand-sky/120 leading-relaxed">
+              CREATIVIDAD, CERCANIA, PERSONALIZACION
             </p>
           </div>
 

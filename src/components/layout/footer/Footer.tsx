@@ -22,7 +22,7 @@ export function Footer() {
             />
           </div>
           <p className="font-sans text-sm text-neutral-400 max-w-sm leading-relaxed">
-            Estudio creativo independiente focalizado en desarrollo web de alto rendimiento, sistemas de diseño e identidades de marca digitales.
+            Estudio de diseño y agencia creativa enfocada en branding, comunicación estratégica y gestión de contenidos digitales. 
           </p>
         </div>
 

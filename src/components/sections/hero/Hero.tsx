@@ -31,19 +31,19 @@ export function Hero() {
           
           {/* Eyebrow / Tag superior opcional */}
           <span className="inline-block text-xs font-display font-semibold tracking-widest text-brand-coral uppercase">
-            Estudio de Diseño & Desarrollo
+            Estudio de Diseño & Agencia Creativa
           </span>
 
           {/* H1 / H2 Principal - Tipografía de Impacto */}
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-antracita tracking-tight leading-[1.1]">
-            Transformamos ideas complejas en experiencias digitales memorables.
+            Tomamos ideas complejas y las traducimos en identidades impecables, funcionales y memorables.
           </h1>
 
-          {/* Párrafo Secundario - Lectura Continua */}
+          {/* Párrafo Secundario - Lectura Continua
           <p className="font-sans text-base sm:text-lg text-brand-antracita/80 leading-relaxed max-w-md">
             Diseño neogrotesco contemporáneo y desarrollo de software a medida.
             Construimos marcas e interfaces con criterio estético y rendimiento excepcional.
-          </p>
+          </p> */}
 
           {/* Botón CTA + Acción Secundarias */}
           <div className="pt-4 flex flex-wrap items-center gap-4">

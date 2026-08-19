@@ -19,7 +19,7 @@ export function Services() {
             Nuestros Servicios
           </span>
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-brand-antracita tracking-tight">
-            Soluciones integrales para marcas que buscan destacar.
+            Soluciones para marcas que buscan destacar.
           </h2>
         </div>
 
