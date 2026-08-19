@@ -4,10 +4,10 @@ import Image from "next/image";
 interface TeamMember {
   name: string;
   role: string;
-  pantoneCode: string; // Código de muestra Pantone para darle un toque más auténtico
+  pantoneCode: string;
   image: string;
   bio: string;
-  accentColor: string; // Color de la paleta Mondrian para la cara posterior
+  accentColor: string;
   socials?: {
     linkedin?: string;
     twitter?: string;
@@ -16,7 +16,7 @@ interface TeamMember {
 }
 
 const TEAM_MEMBERS: TeamMember[] = [
-    {
+  {
     name: "Victoria",
     role: "Founder & Graphic Designer",
     image: "/avatar-placeholder.jpg",
@@ -24,25 +24,25 @@ const TEAM_MEMBERS: TeamMember[] = [
     bio: "Creador de identidades dinámicas, ilustración vectorial y microinteracciones de marca.",
     accentColor: "bg-brand-sky text-brand-antracita",
     socials: { linkedin: "#", twitter: "#" },
-    },
+  },
   {
     name: "Fatima",
     role: "Social & Paid Media",
     image: "/avatar-placeholder.jpg",
     pantoneCode: "19-3911 TCX",
-    bio: "Creo estrategias organizas y con pauta para hacer crecer comunidades y marcas",
+    bio: "Creo estrategias orgánicas y con pauta para hacer crecer comunidades y marcas",
     accentColor: "bg-brand-antracita text-brand-cream",
     socials: { linkedin: "#", github: "#" },
   },
-      {
+  {
     name: "Franco",
     role: "Full-Stack Engineer",
-    pantoneCode: "19-4052 TCX",
     image: "/avatar-placeholder.jpg",
-    bio: "Desarrollador full stack con mas de 4 años de experiencia en proyectos reales, escalables y modernos.",
+    pantoneCode: "19-4052 TCX",
+    bio: "Desarrollador full stack con más de 4 años de experiencia en proyectos reales, escalables y modernos.",
     accentColor: "bg-brand-coral text-white",
     socials: { linkedin: "#", twitter: "#" },
-  }
+  },
 ];
 
 export function Team() {
@@ -56,7 +56,6 @@ export function Team() {
             El Equipo
           </span>
 
-          {/* CONTENEDOR HORIZONTAL STRICTO */}
           <div className="flex flex-row items-center gap-4 flex-wrap sm:flex-nowrap">
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-antracita tracking-tight whitespace-nowrap">
               Mentes creativas detrás de
@@ -73,30 +72,24 @@ export function Team() {
           </div>
         </div>
 
-        {/* GRILLA DE CARDS CON ESTÉTICA PANTONE Y FLIP EFFECT */}
+        {/* GRILLA DE CARDS */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {TEAM_MEMBERS.map((member, index) => (
-            <div
-              key={index}
-              className="group h-[480px] [perspective:1000px]"
-            >
-              {/* Contenedor relativo 3D */}
+            <div key={index} className="group h-[480px] [perspective:1000px]">
               <div className="relative h-full w-full border-4 border-brand-antracita bg-white shadow-xl transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 
-                {/* 1. CARA FRONTAL (ESTILO TARJETA PANTONE®) */}
+                {/* 1. CARA FRONTAL */}
                 <div className="absolute inset-0 h-full w-full bg-white flex flex-col justify-between p-3 [backface-visibility:hidden]">
                   
-                  {/* Muestra / Foto de Color (Ocupa el 72% superior de la tarjeta) */}
                   <div className="relative w-full h-[72%] bg-brand-antracita overflow-hidden border border-brand-antracita/10">
                     <Image
-                      src={member.image}
+                      src={getAssetPath(member.image)}
                       alt={member.name}
                       fill
                       className="object-cover object-center grayscale contrast-125 group-hover:grayscale-0 transition-all duration-300"
                     />
                   </div>
                   
-                  {/* Bloque Tipográfico Estilo Pantone (Parte inferior) */}
                   <div className="px-2 pb-2 pt-3 flex flex-col justify-end space-y-1">
                     <div className="flex items-center justify-between">
                       <span className="font-display font-black text-2xl sm:text-3xl tracking-tighter text-black uppercase">
@@ -117,10 +110,8 @@ export function Team() {
                   </div>
                 </div>
 
-                {/* 2. CARA POSTERIOR (Información + Redes) */}
-                <div
-                  className={`absolute inset-0 h-full w-full p-8 flex flex-col justify-between [transform:rotateY(180deg)] [backface-visibility:hidden] ${member.accentColor}`}
-                >
+                {/* 2. CARA POSTERIOR */}
+                <div className={`absolute inset-0 h-full w-full p-8 flex flex-col justify-between [transform:rotateY(180deg)] [backface-visibility:hidden] ${member.accentColor}`}>
                   <div className="space-y-4">
                     <span className="inline-block font-display text-xs font-bold uppercase tracking-widest opacity-80">
                       // Rol & Perfil
@@ -136,38 +127,6 @@ export function Team() {
                       {member.bio}
                     </p>
                   </div>
-
-                  {/* Redes sociales */}
-                  <div className="pt-4 flex items-center gap-4 border-t border-current/20">
-                    {member.socials?.linkedin && (
-                      <a
-                        href={member.socials.linkedin}
-                        className="hover:scale-110 transition-transform opacity-80 hover:opacity-100"
-                        aria-label="LinkedIn"
-                      >
-                        {/* <Linkedin className="w-5 h-5" /> */}
-                      </a>
-                    )}
-                    {member.socials?.twitter && (
-                      <a
-                        href={member.socials.twitter}
-                        className="hover:scale-110 transition-transform opacity-80 hover:opacity-100"
-                        aria-label="Twitter"
-                      >
-                        {/* <Twitter className="w-5 h-5" /> */}
-                      </a>
-                    )}
-                    {member.socials?.github && (
-                      <a
-                        href={member.socials.github}
-                        className="hover:scale-110 transition-transform opacity-80 hover:opacity-100"
-                        aria-label="GitHub"
-                      >
-                        {/* <Github className="w-5 h-5" /> */}
-                      </a>
-                    )}
-                  </div>
-
                 </div>
 
               </div>
